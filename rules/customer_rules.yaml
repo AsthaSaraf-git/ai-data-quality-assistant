@@ -1,0 +1,20 @@
+table_name: customers
+
+columns:
+  customer_id:
+    not_null: true
+
+  name:
+    not_null: true
+
+  email:
+    not_null: true
+    regex: "^[\\w\\.-]+@[\\w\\.-]+\\.\\w+$"
+
+  age:
+    not_null: true
+    min: 0
+    max: 120
+
+  country:
+    not_null: true

@@ -1,0 +1,6 @@
+customer_id,name,email,age,country
+1,John,john@gmail.com,30,India
+2,,abc.com,25,India
+3,Mary,mary@gmail.com,,USA
+4,Rahul,rahul@gmail.com,200,
+5,,bademail,35,India
