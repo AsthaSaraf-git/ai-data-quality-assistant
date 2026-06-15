@@ -14,24 +14,31 @@ def validate_table(df, rules):
     for column, checks in rules["columns"].items():
         if column not in df.columns:
             validation_results.append({
-                "table_name": table_name,
-                "column": column,
-                "rule": "column_exists",
-                "status": "FAILED",
-                "failed_rows": "column missing"
-            })
+            "table_name": table_name,
+            "column": column,
+            "rule": "column_exists",
+            "status": "FAILED",
+            "failed_count": len(df),
+            "total_records": len(df),
+            "failure_percentage": 100.00,
+            "failed_rows": "column missing"
+        })
             continue
 
         for rule, rule_value in checks.items():
             failed_rows = apply_rule(df, column, rule, rule_value)
-
             status = "PASSED" if len(failed_rows) == 0 else "FAILED"
-
+            total_records = len(df)
+            failed_count = len(failed_rows)
+            failure_percentage = round((failed_count / total_records) * 100, 2)
             validation_results.append({
                 "table_name": table_name,
                 "column": column,
                 "rule": rule,
                 "status": status,
+                "failed_count": failed_count,
+                "total_records": total_records,
+                "failure_percentage": failure_percentage,
                 "failed_rows": failed_rows
             })
 
