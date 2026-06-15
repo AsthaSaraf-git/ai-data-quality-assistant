@@ -1,50 +1,19 @@
+import os
 import pandas as pd
-import yaml
-import re
+
+from file_loader import load_data, load_rules, get_rule_files
+from rule_engine import apply_rule
 
 
-def load_rules(rule_path):
-    with open(rule_path, "r") as file:
-        return yaml.safe_load(file)
-
-
-def validate_not_null(df, column):
-    failures = df[df[column].isnull() | (df[column].astype(str).str.strip() == "")]
-    return failures.index.tolist()
-
-
-def validate_regex(df, column, pattern):
-    failures = []
-
-    for index, value in df[column].items():
-        if pd.isnull(value) or str(value).strip() == "":
-            continue
-
-        if not re.match(pattern, str(value)):
-            failures.append(index)
-
-    return failures
-
-
-def validate_min(df, column, min_value):
-    failures = df[pd.to_numeric(df[column], errors="coerce") < min_value]
-    return failures.index.tolist()
-
-
-def validate_max(df, column, max_value):
-    failures = df[pd.to_numeric(df[column], errors="coerce") > max_value]
-    return failures.index.tolist()
-
-
-def run_validation(data_path, rule_path):
-    df = pd.read_csv(data_path)
-    rules = load_rules(rule_path)
-
+def validate_table(df, rules):
     validation_results = []
+
+    table_name = rules["table_name"]
 
     for column, checks in rules["columns"].items():
         if column not in df.columns:
             validation_results.append({
+                "table_name": table_name,
                 "column": column,
                 "rule": "column_exists",
                 "status": "FAILED",
@@ -53,41 +22,60 @@ def run_validation(data_path, rule_path):
             continue
 
         for rule, rule_value in checks.items():
-            failed_rows = []
-
-            if rule == "not_null" and rule_value is True:
-                failed_rows = validate_not_null(df, column)
-
-            elif rule == "regex":
-                failed_rows = validate_regex(df, column, rule_value)
-
-            elif rule == "min":
-                failed_rows = validate_min(df, column, rule_value)
-
-            elif rule == "max":
-                failed_rows = validate_max(df, column, rule_value)
+            failed_rows = apply_rule(df, column, rule, rule_value)
 
             status = "PASSED" if len(failed_rows) == 0 else "FAILED"
 
             validation_results.append({
+                "table_name": table_name,
                 "column": column,
                 "rule": rule,
                 "status": status,
                 "failed_rows": failed_rows
             })
 
-    result_df = pd.DataFrame(validation_results)
+    return validation_results
+
+
+def run_validation_for_all_tables(data_folder, rules_folder, reports_folder):
+    all_results = []
+
+    rule_files = get_rule_files(rules_folder)
+
+    for rule_file in rule_files:
+        rules = load_rules(rule_file)
+
+        table_name = rules["table_name"]
+        data_path = os.path.join(data_folder, f"{table_name}.csv")
+
+        print(f"\nProcessing table: {table_name}")
+
+        if not os.path.exists(data_path):
+            print(f"Data file missing: {data_path}")
+            continue
+
+        df = load_data(data_path)
+        table_results = validate_table(df, rules)
+
+        all_results.extend(table_results)
+
+    result_df = pd.DataFrame(all_results)
 
     print("\nData Quality Validation Report")
     print("--------------------------------")
     print(result_df)
 
-    result_df.to_csv("reports/validation_report.csv", index=False)
-    print("\nReport saved to reports/validation_report.csv")
+    os.makedirs(reports_folder, exist_ok=True)
+
+    report_path = os.path.join(reports_folder, "validation_report.csv")
+    result_df.to_csv(report_path, index=False)
+
+    print(f"\nReport saved to {report_path}")
 
 
 if __name__ == "__main__":
-    run_validation(
-        data_path="data/customers.csv",
-        rule_path="rules/customer_rules.yaml"
+    run_validation_for_all_tables(
+        data_folder="data",
+        rules_folder="rules",
+        reports_folder="reports"
     )

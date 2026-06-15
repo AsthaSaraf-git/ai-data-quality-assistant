@@ -1,0 +1,11 @@
+table_name: products
+
+columns:
+  product_id:
+    not_null: true
+
+  product_name:
+    not_null: true
+
+  price:
+    min: 0
