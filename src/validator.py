@@ -3,6 +3,7 @@ import pandas as pd
 
 from file_loader import load_data, load_rules, get_rule_files
 from rule_engine import apply_rule
+from report_generator import save_reports
 
 
 def validate_table(df, rules):
@@ -65,12 +66,17 @@ def run_validation_for_all_tables(data_folder, rules_folder, reports_folder):
     print("--------------------------------")
     print(result_df)
 
-    os.makedirs(reports_folder, exist_ok=True)
+    detail_report_path, summary_report_path, summary_df = save_reports(result_df, reports_folder)
 
-    report_path = os.path.join(reports_folder, "validation_report.csv")
-    result_df.to_csv(report_path, index=False)
+    print("\nQuality Summary")
 
-    print(f"\nReport saved to {report_path}")
+    print("--------------------------------")
+
+    print(summary_df)
+
+    print(f"\nDetail report saved to {detail_report_path}")
+
+    print(f"Summary report saved to {summary_report_path}")
 
 
 if __name__ == "__main__":
