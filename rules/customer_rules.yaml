@@ -3,6 +3,7 @@ table_name: customers
 columns:
   customer_id:
     not_null: true
+    unique: true
 
   name:
     not_null: true
@@ -18,3 +19,6 @@ columns:
 
   country:
     not_null: true
+    accepted_values:
+      - India
+      - USA

@@ -7,6 +7,10 @@ def validate_not_null(df, column):
     failures = df[df[column].isnull() | (df[column].astype(str).str.strip() == "")]
     return failures.index.tolist()
 
+def validate_unique(df, column):
+    failures = df[df[column].duplicated(keep=False)]
+    return failures.index.tolist()
+
 
 def validate_regex(df, column, pattern):
     failures = []
@@ -30,6 +34,10 @@ def validate_max(df, column, max_value):
     failures = df[pd.to_numeric(df[column], errors="coerce") > max_value]
     return failures.index.tolist()
 
+def validate_accepted_values(df, column, accepted_values):
+    valid_rows = df[df[column].notna()]
+    failures = valid_rows[~valid_rows[column].isin(accepted_values)]
+    return failures.index.tolist()
 
 def apply_rule(df, column, rule, rule_value):
     if rule == "not_null" and rule_value is True:
@@ -44,4 +52,9 @@ def apply_rule(df, column, rule, rule_value):
     if rule == "max":
         return validate_max(df, column, rule_value)
 
+    if rule == "unique" and rule_value is True:
+        return validate_unique(df, column)
+
+    if rule == "accepted_values":
+        return validate_accepted_values(df, column, rule_value)
     return []

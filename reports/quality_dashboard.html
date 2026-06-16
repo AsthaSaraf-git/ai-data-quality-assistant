@@ -1,0 +1,68 @@
+
+    <html>
+    <head>
+        <title>Data Quality Dashboard</title>
+
+        <style>
+
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightgray;
+        }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Data Quality Dashboard</h1>
+
+        <h2>Overall Quality Score: 31.66%</h2>
+
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>table_name</th>
+      <th>total_rules</th>
+      <th>passed_rules</th>
+      <th>failed_rules</th>
+      <th>quality_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>customers</td>
+      <td>10</td>
+      <td>3</td>
+      <td>7</td>
+      <td>30.00</td>
+    </tr>
+    <tr>
+      <td>products</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2</td>
+      <td>33.33</td>
+    </tr>
+  </tbody>
+</table>
+
+    </body>
+    </html>
+    

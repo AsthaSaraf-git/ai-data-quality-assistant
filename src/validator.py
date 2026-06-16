@@ -73,7 +73,7 @@ def run_validation_for_all_tables(data_folder, rules_folder, reports_folder):
     print("--------------------------------")
     print(result_df)
 
-    detail_report_path, summary_report_path, summary_df = save_reports(result_df, reports_folder)
+    detail_report_path, summary_report_path, dashboard_path, summary_df = save_reports(result_df, reports_folder)
 
     print("\nQuality Summary")
 
@@ -84,6 +84,8 @@ def run_validation_for_all_tables(data_folder, rules_folder, reports_folder):
     print(f"\nDetail report saved to {detail_report_path}")
 
     print(f"Summary report saved to {summary_report_path}")
+
+    print(f"Dashboard saved to {dashboard_path}")
 
 
 if __name__ == "__main__":

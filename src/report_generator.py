@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+from dashboard_generator import generate_html_dashboard
 
 
 def generate_summary_report(result_df):
@@ -31,5 +32,13 @@ def save_reports(result_df, reports_folder):
 
     summary_df = generate_summary_report(result_df)
     summary_df.to_csv(summary_report_path, index=False)
+    dashboard_path = os.path.join(
+        reports_folder,
+        "quality_dashboard.html"
+    )
+    generate_html_dashboard(
+        summary_df,
+        dashboard_path
+    )
 
-    return detail_report_path, summary_report_path, summary_df
+    return detail_report_path, summary_report_path, dashboard_path, summary_df
