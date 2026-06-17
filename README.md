@@ -178,7 +178,7 @@ Generates an HTML dashboard containing:
 ⸻
 
 🖥️ Run Locally
-
+```text
 Install dependencies:
 
 python3 -m pip install -r requirements.txt
@@ -195,7 +195,7 @@ reports/history.csv
 reports/quality_dashboard.html
 reports/customers_quality_trend.png
 reports/products_quality_trend.png
-
+```
 ⸻
 
 💡 Design Principles
