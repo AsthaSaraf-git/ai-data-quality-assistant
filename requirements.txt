@@ -1,2 +1,5 @@
 pandas
 pyyaml
+openai
+python-dotenv
+matplotlib

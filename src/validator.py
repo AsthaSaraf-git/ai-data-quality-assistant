@@ -4,6 +4,9 @@ import pandas as pd
 from file_loader import load_data, load_rules, get_rule_files
 from rule_engine import apply_rule
 from report_generator import save_reports
+from ai_assistant import analyze_quality_report, save_ai_analysis
+from history_tracker import append_run_history
+from trend_dashboard import generate_trend_chart
 
 
 def validate_table(df, rules):
@@ -74,6 +77,24 @@ def run_validation_for_all_tables(data_folder, rules_folder, reports_folder):
     print(result_df)
 
     detail_report_path, summary_report_path, dashboard_path, summary_df = save_reports(result_df, reports_folder)
+    history_path = append_run_history(
+        summary_df,
+        reports_folder
+    )
+    print(f"History saved to {history_path}")
+    generate_trend_chart(
+        history_path,
+        reports_folder
+    )
+    #analysis = analyze_quality_report(
+        #summary_df,
+        #result_df
+    #)
+    #save_ai_analysis(analysis)
+
+    #print("\nAI Analysis")
+    #print("--------------------------------")
+    #print(analysis)
 
     print("\nQuality Summary")
 

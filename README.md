@@ -1,8 +1,8 @@
 🔍 Data Quality Assistant
 
-A metadata-driven data quality framework that validates datasets using configurable YAML rules and generates quality metrics, reports, and dashboards.
+A metadata-driven data quality framework built in Python that validates datasets using configurable YAML rules, tracks quality trends over time, and generates dashboards for monitoring data health.
 
-The framework is designed around a core principle:
+The framework follows a simple principle:
 
 New datasets should be onboarded through configuration, not code changes.
 
@@ -19,14 +19,16 @@ Validation Rules
 * ✅ Unique Validation
 * ✅ Accepted Values Validation
 
-Framework Features
+Framework Capabilities
 
-* ✅ Metadata-driven rule configuration
-* ✅ Multi-table processing
-* ✅ CSV-based reporting
+* ✅ Metadata-driven architecture
+* ✅ Multi-table validation
+* ✅ YAML-based rule configuration
+* ✅ Detailed validation reports
 * ✅ Quality score calculation
+* ✅ Historical quality tracking
+* ✅ Trend chart generation
 * ✅ HTML dashboard generation
-* ✅ Extensible rule engine architecture
 
 ⸻
 
@@ -35,17 +37,21 @@ Framework Features
 CSV Files
     │
     ▼
-YAML Rule Definitions
+YAML Rules
     │
     ▼
-Rule Engine
+Validation Engine
     │
     ▼
-Validation Results
+Validation Report
     │
-    ├── Detailed Report
+    ▼
+Quality Metrics
+    │
     ├── Summary Report
-    └── Quality Dashboard
+    ├── History Tracking
+    ├── Trend Charts
+    └── HTML Dashboard
 
 ⸻
 
@@ -64,6 +70,9 @@ data-quality-assistant/
 ├── reports/
 │   ├── validation_report.csv
 │   ├── summary_report.csv
+│   ├── history.csv
+│   ├── customers_quality_trend.png
+│   ├── products_quality_trend.png
 │   └── quality_dashboard.html
 │
 ├── src/
@@ -71,6 +80,8 @@ data-quality-assistant/
 │   ├── rule_engine.py
 │   ├── report_generator.py
 │   ├── dashboard_generator.py
+│   ├── history_tracker.py
+│   ├── trend_dashboard.py
 │   └── validator.py
 │
 ├── requirements.txt
@@ -96,20 +107,62 @@ columns:
 
 ⸻
 
-📊 Sample Output
+📊 Outputs
 
 Validation Report
+
+Provides row-level validation results.
+
+Example:
 
 table_name	column	rule	status
 customers	customer_id	unique	FAILED
 customers	email	regex	FAILED
 products	product_name	not_null	FAILED
 
-Quality Summary
+⸻
+
+Summary Report
+
+Provides overall quality scores.
 
 table_name	total_rules	passed_rules	failed_rules	quality_score
-customers	9	3	6	33.33
+customers	10	3	7	30.0
 products	3	1	2	33.33
+
+⸻
+
+Historical Tracking
+
+Stores quality metrics from every execution.
+
+Example:
+
+run_timestamp	table_name	quality_score
+2026-06-15	customers	90
+2026-06-16	customers	88
+2026-06-17	customers	30
+
+⸻
+
+Trend Charts
+
+Automatically generates quality trend visualizations.
+
+Generated files:
+
+customers_quality_trend.png
+products_quality_trend.png
+
+⸻
+
+Dashboard
+
+Generates an HTML dashboard containing:
+
+* Validation summary
+* Quality metrics
+* Trend visualizations
 
 ⸻
 
@@ -117,7 +170,7 @@ products	3	1	2	33.33
 
 Install dependencies:
 
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 
 Run validation:
 
@@ -127,19 +180,20 @@ Generated outputs:
 
 reports/validation_report.csv
 reports/summary_report.csv
+reports/history.csv
 reports/quality_dashboard.html
+reports/customers_quality_trend.png
+reports/products_quality_trend.png
 
 ⸻
 
 💡 Design Principles
 
-This project follows a metadata-driven architecture:
-
-* Validation logic is separated from configuration.
-* New datasets can be onboarded using YAML files.
-* Validation rules are reusable across datasets.
-* Rule execution is centralized in a dedicated rule engine.
-* Reports and dashboards are generated automatically.
+* Separation of Concerns
+* Metadata-Driven Design
+* Extensible Rule Engine
+* Reusable Validation Logic
+* Configuration over Code
 
 ⸻
 
@@ -147,37 +201,39 @@ This project follows a metadata-driven architecture:
 
 Phase 1 - Data Quality Framework ✅
 
-* Metadata-driven rules
 * Multi-table validation
+* Metadata-driven rules
 * Quality scoring
-* HTML dashboard
+* Historical tracking
+* Trend analysis
+* Dashboard generation
 
 Phase 2 - Observability
 
-* Historical quality tracking
-* Trend analysis
-* Data quality alerts
+* Quality alerts
 * SLA monitoring
+* Data freshness checks
+* Volume anomaly detection
 
 Phase 3 - AI Assistant
 
-* Root cause analysis using LLMs
-* Natural language quality investigation
-* AI-generated remediation recommendations
-* Conversational Data Quality Copilot
+* OpenAI integration
+* Root cause analysis
+* Natural language investigation
+* Remediation recommendations
 
 Example:
 
 Why did customer quality score drop this week?
-Customer quality score dropped from 92% to 78%.
+Customer quality score decreased from 88% to 30%.
 Primary causes:
-- Increase in duplicate customer IDs
-- Missing country values
+- Duplicate customer IDs
 - Invalid email formats
+- Missing customer names
 Recommended actions:
-- Validate IDs at source
-- Add country as mandatory field
-- Introduce email validation during ingestion
+- Validate customer IDs at source
+- Add email validation during ingestion
+- Make customer name mandatory
 
 ⸻
 
@@ -185,6 +241,7 @@ Recommended actions:
 
 * Python
 * Pandas
+* Matplotlib
 * YAML
 * HTML
 * Git
@@ -194,4 +251,4 @@ Recommended actions:
 
 👩‍💻 Author
 
-Built as part of a hands-on Data Engineering and Data Architecture portfolio focused on metadata-driven frameworks, governance, and data quality automation.
+Built as part of a Data Engineering and Data Architecture portfolio focused on metadata-driven frameworks, data quality automation, observability, and AI-powered analytics.
