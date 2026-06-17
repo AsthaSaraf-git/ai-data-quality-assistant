@@ -186,9 +186,9 @@ python3 -m pip install -r requirements.txt
 Run validation:
 
 python3 src/validator.py
-
+```
 Generated outputs:
-
+```text
 reports/validation_report.csv
 reports/summary_report.csv
 reports/history.csv
