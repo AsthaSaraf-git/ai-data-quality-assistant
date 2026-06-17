@@ -31,6 +31,17 @@ Framework Capabilities
 * ✅ HTML dashboard generation
 
 ⸻
+## 📸 Screenshots
+
+### Data Quality Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Customer Quality Trend
+
+![Customer Trend](screenshots/customers_quality_trend.png)
+
+______
 
 🏗️ Architecture
 
