@@ -44,7 +44,7 @@ Framework Capabilities
 ______
 
 🏗️ Architecture
-
+```text
 CSV Files
     │
     ▼
@@ -63,7 +63,7 @@ Quality Metrics
     ├── History Tracking
     ├── Trend Charts
     └── HTML Dashboard
-
+```
 ⸻
 
 📂 Project Structure
