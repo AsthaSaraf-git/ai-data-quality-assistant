@@ -67,7 +67,7 @@ Quality Metrics
 ⸻
 
 📂 Project Structure
-
+```text
 data-quality-assistant/
 │
 ├── data/
@@ -97,11 +97,11 @@ data-quality-assistant/
 │
 ├── requirements.txt
 └── README.md
-
+```
 ⸻
 
 ⚙️ Example Rule Configuration
-
+```text
 table_name: customers
 columns:
   customer_id:
@@ -115,11 +115,11 @@ columns:
     accepted_values:
       - India
       - USA
-
+```
 ⸻
 
 📊 Outputs
-
+```text
 Validation Report
 
 Provides row-level validation results.
@@ -174,7 +174,7 @@ Generates an HTML dashboard containing:
 * Validation summary
 * Quality metrics
 * Trend visualizations
-
+```
 ⸻
 
 🖥️ Run Locally
