@@ -29,6 +29,7 @@ Framework Capabilities
 * ✅ Historical quality tracking
 * ✅ Trend chart generation
 * ✅ HTML dashboard generation
+* ✅ Multiple data sources — CSV files or Databricks/Unity Catalog tables
 
 ⸻
 ## 📸 Screenshots
@@ -45,7 +46,7 @@ ______
 
 🏗️ Architecture
 ```text
-CSV Files
+CSV Files  ──or──  Databricks / Unity Catalog Tables
     │
     ▼
 YAML Rules
@@ -87,13 +88,20 @@ data-quality-assistant/
 │   └── quality_dashboard.html
 │
 ├── src/
-│   ├── file_loader.py
+│   ├── file_loader.py            # CSV loading + Databricks/Unity Catalog loading
 │   ├── rule_engine.py
 │   ├── report_generator.py
 │   ├── dashboard_generator.py
 │   ├── history_tracker.py
 │   ├── trend_dashboard.py
-│   └── validator.py
+│   ├── rag_engine.py             # chunks validation/history reports for retrieval
+│   ├── ai_assistant.py
+│   ├── validator.py              # --source csv | databricks
+│   ├── test_databricks_connection.py
+│   └── test_openai.py
+│
+├── rag_prototype/                # RAG development notes + prototype scripts
+│   └── RAG_INTEGRATION_CONTEXT.md
 │
 ├── requirements.txt
 └── README.md
@@ -183,9 +191,15 @@ Install dependencies:
 
 python3 -m pip install -r requirements.txt
 
-Run validation:
+Run validation against local CSV files (default):
 
-python3 src/validator.py
+python3 src/validator.py --source csv
+
+Run validation against Databricks/Unity Catalog tables instead:
+(requires DATABRICKS_SERVER_HOSTNAME, DATABRICKS_HTTP_PATH, and
+DATABRICKS_TOKEN environment variables)
+
+python3 src/validator.py --source databricks
 ```
 Generated outputs:
 ```text
@@ -255,6 +269,7 @@ Recommended actions:
 * Matplotlib
 * YAML
 * HTML
+* Databricks SQL Connector (Unity Catalog)
 * Git
 * GitHub
 
