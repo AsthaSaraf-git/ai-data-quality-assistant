@@ -1,12 +1,16 @@
+import argparse
 import os
 import pandas as pd
 
-from file_loader import load_data, load_rules, get_rule_files
+from file_loader import load_data, load_rules, get_rule_files, load_table_from_databricks
 from rule_engine import apply_rule
 from report_generator import save_reports
 from ai_assistant import analyze_quality_report, save_ai_analysis
 from history_tracker import append_run_history
 from trend_dashboard import generate_trend_chart
+
+DATABRICKS_CATALOG = "dq_assistant"
+DATABRICKS_SCHEMA = "bronze"
 
 
 def validate_table(df, rules):
@@ -48,7 +52,7 @@ def validate_table(df, rules):
     return validation_results
 
 
-def run_validation_for_all_tables(data_folder, rules_folder, reports_folder):
+def run_validation_for_all_tables(data_folder, rules_folder, reports_folder, source="csv"):
     all_results = []
 
     rule_files = get_rule_files(rules_folder)
@@ -57,15 +61,20 @@ def run_validation_for_all_tables(data_folder, rules_folder, reports_folder):
         rules = load_rules(rule_file)
 
         table_name = rules["table_name"]
-        data_path = os.path.join(data_folder, f"{table_name}.csv")
 
         print(f"\nProcessing table: {table_name}")
 
-        if not os.path.exists(data_path):
-            print(f"Data file missing: {data_path}")
-            continue
+        if source == "databricks":
+            df = load_table_from_databricks(DATABRICKS_CATALOG, DATABRICKS_SCHEMA, table_name)
+        else:
+            data_path = os.path.join(data_folder, f"{table_name}.csv")
 
-        df = load_data(data_path)
+            if not os.path.exists(data_path):
+                print(f"Data file missing: {data_path}")
+                continue
+
+            df = load_data(data_path)
+
         table_results = validate_table(df, rules)
 
         all_results.extend(table_results)
@@ -110,8 +119,13 @@ def run_validation_for_all_tables(data_folder, rules_folder, reports_folder):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--source", choices=["csv", "databricks"], default="csv")
+    args = parser.parse_args()
+
     run_validation_for_all_tables(
         data_folder="data",
         rules_folder="rules",
-        reports_folder="reports"
+        reports_folder="reports",
+        source=args.source
     )

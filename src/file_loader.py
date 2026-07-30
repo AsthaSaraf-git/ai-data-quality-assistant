@@ -1,11 +1,12 @@
 import os
+import numpy as np
 import pandas as pd
 import yaml
 from databricks import sql
 
 
 def load_data(data_path):
-    return pd.read_csv(data_path)
+    return pd.read_csv(data_path, keep_default_na=False, na_values=[""])
 
 
 def load_table_from_databricks(catalog, schema, table_name):
@@ -21,7 +22,11 @@ def load_table_from_databricks(catalog, schema, table_name):
         with connection.cursor() as cursor:
             cursor.execute(f"SELECT * FROM {catalog}.{schema}.{table_name}")
             columns = [col[0] for col in cursor.description]
-            return pd.DataFrame(cursor.fetchall(), columns=columns)
+            df = pd.DataFrame(cursor.fetchall(), columns=columns)
+            # pd.read_csv() treats blank fields as NaN by default; match that
+            # here so the not_null/accepted_values rules see the same nulls
+            # regardless of which source loaded the table.
+            return df.replace("", np.nan)
 
 
 def load_rules(rule_path):
