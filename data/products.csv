@@ -1,4 +1,401 @@
-product_id,product_name,price
-1,Laptop,1000
-2,,500
-3,Mouse,-10
+product_id,product_name,category,price,stock_quantity
+PROD00001,Self-enabling tertiary model,Apparel,392.98,572
+PROD00002,Enterprise-wide object-oriented methodology,Apparel,130.62,792
+PROD00003,Extended stable synergy,Books,369.21,121
+PROD00004,Persistent encompassing productivity,Home,226.06,102
+PROD00005,Public-key reciprocal throughput,Toys,203.28,628
+PROD00006,Optional non-volatile superstructure,Books,354.86,5
+PROD00007,Self-enabling analyzing model,Toys,412.51,445
+PROD00008,Exclusive high-level Local Area Network,Toys,135.23,38
+PROD00009,Digitized disintermediate collaboration,Books,465.69,533
+PROD00010,User-friendly systemic task-force,Home,481.95,655
+PROD00011,Innovative intermediate installation,Toys,10.3,292
+PROD00012,Intuitive asymmetric productivity,Books,393.06,237
+PROD00013,Expanded incremental flexibility,Books,338.64,0
+PROD00014,Horizontal secondary complexity,Grocery,47.99,361
+PROD00015,Function-based systemic policy,Electronics,205.7,754
+PROD00016,Front-line impactful encoding,Books,459.99,849
+PROD00017,Customizable coherent core,Apparel,293.55,231
+PROD00018,Assimilated dynamic website,Toys,101.29,4
+PROD00019,Integrated maximized matrix,Electronics,206.53,515
+PROD00020,Realigned intermediate interface,Apparel,473.77,897
+PROD00021,Stand-alone 5thgeneration customer loyalty,Grocery,397.73,989
+PROD00022,Diverse encompassing challenge,Apparel,244.4,984
+PROD00023,Assimilated empowering utilization,Electronics,342.39,493
+PROD00024,Grass-roots stable neural-net,Home,38.44,693
+PROD00025,Enhanced secondary analyzer,Apparel,401.08,528
+PROD00026,Up-sized mobile toolset,Apparel,351.91,95
+PROD00027,Ameliorated analyzing artificial intelligence,Toys,375.65,953
+PROD00028,Intuitive real-time framework,Toys,160.37,275
+PROD00029,Cloned incremental hierarchy,Home,374.35,510
+PROD00030,Synchronized stable array,Apparel,121.26,211
+PROD00031,Object-based uniform challenge,Apparel,418.3,159
+PROD00032,Front-line bifurcated orchestration,Books,64.34,504
+PROD00033,User-centric motivating capability,Electronics,383.3,868
+PROD00034,Programmable static paradigm,Toys,312.23,889
+PROD00035,Vision-oriented multi-tasking extranet,Toys,95.52,286
+PROD00036,Proactive background encoding,Toys,376.33,818
+PROD00037,Right-sized bottom-line throughput,Apparel,470.13,403
+PROD00038,Intuitive full-range paradigm,Electronics,389.07,715
+PROD00039,User-centric human-resource workforce,Grocery,-16.97,594
+PROD00040,User-friendly value-added encoding,Home,183.99,561
+PROD00041,Optimized didactic circuit,Apparel,138.36,374
+PROD00042,Customer-focused context-sensitive data-warehouse,Apparel,214.85,373
+PROD00043,Grass-roots leadingedge installation,Home,143.42,589
+PROD00044,Function-based optimizing approach,Home,408.02,568
+PROD00045,Pre-emptive national hub,Books,193.54,153
+PROD00046,Total bifurcated functionalities,Home,9.82,914
+PROD00047,Quality-focused interactive leverage,Grocery,260.92,307
+PROD00048,Synergized dynamic focus group,Electronics,429.96,707
+PROD00049,Digitized high-level leverage,Books,111.66,98
+PROD00050,Universal holistic function,Toys,170.65,570
+PROD00051,Ameliorated secondary portal,Books,-44.06,986
+PROD00052,Automated user-facing protocol,Toys,290.54,178
+PROD00053,Business-focused system-worthy toolset,Toys,145.88,499
+PROD00054,Synchronized disintermediate extranet,Toys,226.23,293
+PROD00055,Reactive human-resource function,Books,478.51,827
+PROD00056,Sharable tangible hierarchy,Grocery,213.8,869
+PROD00057,Synergized bottom-line monitoring,Apparel,44.16,324
+PROD00058,Front-line leadingedge info-mediaries,Grocery,356.66,277
+PROD00059,Advanced hybrid extranet,Books,391.58,601
+PROD00060,Innovative background system engine,Electronics,227.89,128
+PROD00061,Front-line exuding database,Books,332.7,767
+PROD00062,Diverse leadingedge product,Electronics,87.62,959
+PROD00063,Intuitive zero administration project,Electronics,-30.55,106
+PROD00064,Open-source 5thgeneration focus group,Grocery,81.86,316
+PROD00065,Configurable zero-defect matrix,Home,370.11,134
+PROD00066,Phased user-facing installation,Apparel,89.45,881
+PROD00067,Managed transitional interface,Toys,432.8,957
+PROD00068,Cross-platform cohesive standardization,Books,225.2,552
+PROD00069,Fundamental motivating architecture,Books,300.8,898
+PROD00070,Multi-channeled intangible portal,Apparel,264.11,930
+PROD00071,Upgradable neutral support,Grocery,272.14,315
+PROD00072,Inverse logistical solution,Electronics,133.6,535
+PROD00073,Assimilated well-modulated application,Grocery,424.73,547
+PROD00074,,Grocery,461.43,306
+PROD00075,,Home,218.07,815
+PROD00076,,Toys,189.95,447
+PROD00077,Open-architected dedicated product,Grocery,85.82,848
+PROD00078,Integrated foreground orchestration,Home,135.18,529
+PROD00079,Configurable bifurcated complexity,Books,455.43,278
+PROD00080,Fully-configurable multi-state structure,Grocery,372.75,192
+PROD00081,Visionary solution-oriented task-force,Books,95.29,466
+PROD00082,De-engineered radical software,Home,139.71,328
+PROD00083,,Home,29.57,995
+PROD00084,Polarized user-facing challenge,Books,138.25,8
+PROD00085,Fundamental context-sensitive software,Apparel,79.59,430
+PROD00086,Reverse-engineered fresh-thinking website,Grocery,400.73,713
+PROD00087,Horizontal dedicated artificial intelligence,Home,168.47,57
+PROD00088,Operative holistic contingency,Home,199.25,196
+PROD00089,Object-based homogeneous orchestration,Electronics,128.79,124
+PROD00090,Face-to-face 3rdgeneration adapter,Grocery,358.77,253
+PROD00091,Realigned secondary pricing structure,Electronics,21.59,533
+PROD00092,Self-enabling discrete array,Apparel,108.18,958
+PROD00093,Persistent dedicated firmware,Toys,316.44,533
+PROD00094,Total composite application,Apparel,243.21,908
+PROD00095,Open-architected regional interface,Home,335.01,648
+PROD00096,Right-sized empowering collaboration,Toys,12.46,122
+PROD00097,Cross-group holistic concept,Toys,125.33,802
+PROD00098,Re-contextualized bottom-line access,Electronics,345.76,254
+PROD00099,Universal multi-tasking Internet solution,Books,50.24,61
+PROD00100,Visionary logistical service-desk,Electronics,324.06,128
+PROD00101,Proactive bottom-line definition,Books,161.79,774
+PROD00102,Universal demand-driven core,Electronics,446.44,705
+PROD00103,Future-proofed executive synergy,Electronics,363.58,496
+PROD00104,Proactive homogeneous capacity,Grocery,281.72,194
+PROD00105,Optional demand-driven policy,Grocery,274.09,281
+PROD00106,Extended executive superstructure,Home,301.35,70
+PROD00107,Synergistic content-based instruction set,Toys,227.45,375
+PROD00108,Enterprise-wide incremental utilization,Books,389.08,189
+PROD00109,Digitized 4thgeneration frame,Toys,311.77,244
+PROD00110,Fundamental disintermediate process improvement,Grocery,36.35,194
+PROD00111,Organized dynamic hub,Toys,251.29,289
+PROD00112,Reduced systemic project,Toys,322.25,674
+PROD00113,Persevering attitude-oriented access,Electronics,418.42,206
+PROD00114,Phased client-driven Graphic Interface,Books,99.85,856
+PROD00115,Team-oriented hybrid software,Toys,247.51,262
+PROD00116,Extended transitional info-mediaries,Electronics,114.26,952
+PROD00117,Triple-buffered interactive support,Electronics,329.6,479
+PROD00118,Right-sized eco-centric archive,Grocery,35.05,841
+PROD00119,Cross-platform next generation approach,Apparel,355.67,541
+PROD00120,Business-focused full-range encoding,Home,39.84,983
+PROD00121,Phased heuristic portal,Grocery,55.11,194
+PROD00122,Synchronized radical strategy,Home,330.15,571
+PROD00123,User-friendly 6thgeneration ability,Books,210.52,590
+PROD00124,Function-based motivating process improvement,Electronics,232.07,170
+PROD00125,Multi-tiered exuding infrastructure,Books,277.23,161
+PROD00126,Synchronized holistic capacity,Apparel,301.96,563
+PROD00127,Realigned 6thgeneration paradigm,Books,165.7,440
+PROD00128,Enhanced empowering concept,Toys,165.11,219
+PROD00129,Profit-focused modular Graphical User Interface,Apparel,277.37,984
+PROD00130,Persistent clear-thinking array,Apparel,-48.3,610
+PROD00131,,Electronics,71.87,307
+PROD00132,Optional client-server firmware,Books,111.34,842
+PROD00133,Customizable foreground analyzer,Toys,279.06,158
+PROD00134,De-engineered modular focus group,Apparel,232.88,375
+PROD00135,User-friendly high-level Internet solution,Apparel,128.68,94
+PROD00136,Horizontal empowering pricing structure,Electronics,286.69,740
+PROD00137,Virtual empowering model,Books,243.85,719
+PROD00138,Intuitive intermediate concept,Apparel,454.29,38
+PROD00139,Intuitive user-facing matrix,Electronics,290.26,943
+PROD00140,Virtual coherent open architecture,Grocery,177.23,952
+PROD00141,Switchable scalable website,Books,435.54,869
+PROD00142,Organic actuating core,Grocery,10.66,55
+PROD00143,Distributed actuating emulation,Home,25.39,334
+PROD00144,Enterprise-wide 5thgeneration leverage,Books,114.29,402
+PROD00145,Fundamental cohesive strategy,Electronics,377.66,227
+PROD00146,Persistent intermediate budgetary management,Apparel,394.25,84
+PROD00147,Proactive 6thgeneration intranet,Apparel,373.93,87
+PROD00148,Multi-channeled tertiary open architecture,Home,220.07,492
+PROD00149,Pre-emptive logistical methodology,Home,246.49,574
+PROD00150,Customizable uniform circuit,Electronics,369.16,272
+PROD00151,Decentralized grid-enabled array,Electronics,165.09,115
+PROD00152,Expanded executive contingency,Apparel,214.65,352
+PROD00153,Down-sized value-added migration,Apparel,16.98,631
+PROD00154,Future-proofed non-volatile protocol,Grocery,402.38,45
+PROD00155,Reduced didactic paradigm,Home,120.58,775
+PROD00156,Adaptive multi-tasking throughput,Home,47.48,971
+PROD00157,Re-engineered contextually-based instruction set,Apparel,78.1,14
+PROD00158,Compatible dynamic throughput,Grocery,403.12,23
+PROD00159,Proactive systematic attitude,Toys,371.31,535
+PROD00160,Managed 4thgeneration forecast,Home,276.66,711
+PROD00161,Synergized systemic capability,Books,14.1,539
+PROD00162,Object-based holistic parallelism,Books,89.31,632
+PROD00163,Customer-focused fresh-thinking collaboration,Electronics,235.16,397
+PROD00164,Assimilated attitude-oriented knowledgebase,Apparel,333.18,885
+PROD00165,Triple-buffered stable matrices,Grocery,149.79,236
+PROD00166,Persevering responsive flexibility,Apparel,256.73,496
+PROD00167,Right-sized stable ability,Toys,268.12,989
+PROD00168,Managed 6thgeneration projection,Toys,-37.88,312
+PROD00169,Secured local Graphic Interface,Apparel,199.73,700
+PROD00170,Upgradable upward-trending website,Toys,314.49,282
+PROD00171,Re-contextualized clear-thinking data-warehouse,Electronics,314.77,966
+PROD00172,Business-focused secondary forecast,Grocery,143.7,672
+PROD00173,Inverse analyzing synergy,Books,366.3,627
+PROD00174,Compatible neutral portal,Toys,344.83,156
+PROD00175,Multi-tiered background initiative,Grocery,159.63,555
+PROD00176,Function-based context-sensitive encoding,Books,327.97,819
+PROD00177,Visionary impactful array,Toys,73.36,931
+PROD00178,Ameliorated demand-driven complexity,Home,497.86,671
+PROD00179,Networked zero-defect initiative,Toys,458.97,545
+PROD00180,Horizontal secondary system engine,Home,63.6,744
+PROD00181,,Grocery,162.75,310
+PROD00182,Innovative mobile website,Books,467.22,280
+PROD00183,Optional user-facing workforce,Electronics,98.03,780
+PROD00184,Integrated systemic portal,Toys,310.39,236
+PROD00185,De-engineered heuristic secured line,Grocery,-46.11,137
+PROD00186,Cross-platform holistic migration,Apparel,304.33,188
+PROD00187,Exclusive mobile knowledge user,Home,248.27,231
+PROD00188,,Grocery,-36.78,227
+PROD00189,Re-contextualized radical interface,Electronics,494.18,181
+PROD00190,Cross-group web-enabled interface,Grocery,492.89,704
+PROD00191,Multi-layered reciprocal contingency,Grocery,231.48,794
+PROD00192,Optional responsive interface,Apparel,368.99,403
+PROD00193,Cross-group 6thgeneration migration,Toys,372.52,656
+PROD00194,Mandatory maximized service-desk,Grocery,394.53,467
+PROD00195,Face-to-face secondary software,Toys,26.0,550
+PROD00196,Universal coherent methodology,Toys,368.91,783
+PROD00197,Progressive responsive project,Grocery,29.4,905
+PROD00198,Progressive attitude-oriented frame,Grocery,414.67,301
+PROD00199,Persistent intermediate artificial intelligence,Home,32.0,474
+PROD00200,Polarized exuding collaboration,Electronics,228.59,184
+PROD00201,De-engineered systemic framework,Home,469.23,402
+PROD00202,Fully-configurable multi-state interface,Toys,228.19,918
+PROD00203,Implemented non-volatile application,Apparel,104.96,331
+PROD00204,Reactive asynchronous analyzer,Books,454.05,750
+PROD00205,Profound bi-directional migration,Apparel,61.51,87
+PROD00206,Optimized incremental attitude,Toys,195.12,626
+PROD00207,Persistent stable success,Home,192.45,934
+PROD00208,Re-contextualized eco-centric help-desk,Home,436.3,889
+PROD00209,Function-based optimal artificial intelligence,Apparel,385.73,316
+PROD00210,Visionary motivating adapter,Home,480.68,120
+PROD00211,Customizable user-facing protocol,Electronics,-12.5,469
+PROD00212,Persistent context-sensitive toolset,Toys,251.83,903
+PROD00213,Enterprise-wide hybrid analyzer,Grocery,112.35,419
+PROD00214,Configurable intangible strategy,Apparel,-6.77,634
+PROD00215,Innovative foreground parallelism,Home,410.96,151
+PROD00216,Up-sized logistical system engine,Electronics,177.76,683
+PROD00217,Synchronized local process improvement,Electronics,303.63,50
+PROD00218,Fundamental global workforce,Apparel,496.9,625
+PROD00219,Enterprise-wide didactic contingency,Toys,351.42,181
+PROD00220,Configurable value-added portal,Electronics,375.92,95
+PROD00221,Fundamental systematic benchmark,Electronics,164.8,776
+PROD00222,Optional national adapter,Home,277.48,124
+PROD00223,Adaptive hybrid budgetary management,Toys,140.84,214
+PROD00224,Advanced composite projection,Books,307.97,644
+PROD00225,Polarized logistical solution,Toys,48.4,956
+PROD00226,Open-architected stable synergy,Apparel,354.87,265
+PROD00227,Robust uniform matrix,Home,497.54,629
+PROD00228,Innovative regional pricing structure,Grocery,262.25,827
+PROD00229,Multi-lateral system-worthy service-desk,Home,306.66,1
+PROD00230,Team-oriented systematic infrastructure,Books,235.12,868
+PROD00231,Innovative background capacity,Electronics,309.58,341
+PROD00232,Devolved 24/7 core,Books,403.99,206
+PROD00233,Customizable 3rdgeneration standardization,Apparel,130.94,518
+PROD00234,Ergonomic 4thgeneration database,Apparel,384.68,349
+PROD00235,Polarized solution-oriented circuit,Home,286.62,198
+PROD00236,Streamlined disintermediate Internet solution,Grocery,172.28,816
+PROD00237,,Grocery,72.2,913
+PROD00238,Cross-group exuding throughput,Grocery,448.48,950
+PROD00239,Persistent client-server leverage,Books,418.38,694
+PROD00240,Optimized 3rdgeneration budgetary management,Books,270.26,339
+PROD00241,Down-sized coherent support,Home,444.57,287
+PROD00242,Total leadingedge matrix,Toys,172.88,862
+PROD00243,Phased 3rdgeneration knowledge user,Electronics,304.82,885
+PROD00244,Reduced dynamic customer loyalty,Books,157.6,32
+PROD00245,Implemented non-volatile infrastructure,Apparel,47.96,462
+PROD00246,Business-focused full-range access,Home,154.8,114
+PROD00247,Customer-focused responsive structure,Electronics,23.51,454
+PROD00248,Optional intangible methodology,Home,400.52,194
+PROD00249,User-centric optimal policy,Apparel,244.32,794
+PROD00250,Upgradable neutral frame,Toys,385.89,692
+PROD00251,Automated mobile initiative,Grocery,106.57,730
+PROD00252,Pre-emptive multimedia parallelism,Electronics,62.34,703
+PROD00253,Up-sized reciprocal service-desk,Electronics,436.58,105
+PROD00254,Pre-emptive discrete structure,Toys,331.2,776
+PROD00255,Centralized multi-tasking adapter,Home,446.61,293
+PROD00256,Optimized object-oriented functionalities,Electronics,162.98,279
+PROD00257,Reactive asymmetric flexibility,Toys,-19.48,104
+PROD00258,Stand-alone intangible leverage,Home,178.41,965
+PROD00259,Customizable modular process improvement,Electronics,145.22,318
+PROD00260,Stand-alone grid-enabled knowledge user,Home,172.68,29
+PROD00261,Total intermediate adapter,Electronics,339.37,88
+PROD00262,Diverse executive success,Toys,93.6,644
+PROD00263,Ergonomic methodical hardware,Apparel,351.19,340
+PROD00264,Organic discrete middleware,Toys,357.88,80
+PROD00265,Face-to-face optimizing software,Home,379.09,95
+PROD00266,Mandatory real-time structure,Grocery,460.25,317
+PROD00267,Switchable maximized capacity,Home,356.56,970
+PROD00268,Implemented uniform structure,Apparel,431.24,401
+PROD00269,Networked intangible service-desk,Apparel,459.05,464
+PROD00270,Streamlined user-facing hierarchy,Grocery,37.36,472
+PROD00271,Phased cohesive process improvement,Toys,144.72,130
+PROD00272,Expanded executive solution,Electronics,205.81,333
+PROD00273,User-friendly background secured line,Grocery,40.11,410
+PROD00274,Polarized clear-thinking conglomeration,Home,123.09,997
+PROD00275,Exclusive cohesive portal,Books,37.7,605
+PROD00276,Pre-emptive bandwidth-monitored utilization,Apparel,490.2,557
+PROD00277,Operative modular framework,Books,90.68,953
+PROD00278,Front-line demand-driven open architecture,Toys,419.19,474
+PROD00279,Business-focused 3rdgeneration help-desk,Apparel,53.34,978
+PROD00280,Fundamental heuristic service-desk,Toys,301.14,789
+PROD00281,Diverse context-sensitive middleware,Electronics,167.07,92
+PROD00282,Automated asymmetric Graphical User Interface,Books,73.76,829
+PROD00283,,Toys,77.63,298
+PROD00284,Focused bottom-line open architecture,Books,291.08,898
+PROD00285,Face-to-face mobile firmware,Apparel,287.29,940
+PROD00286,Mandatory zero tolerance help-desk,Apparel,220.19,91
+PROD00287,Visionary 6thgeneration throughput,Home,307.69,872
+PROD00288,Realigned encompassing collaboration,Electronics,187.77,0
+PROD00289,Team-oriented multimedia portal,Apparel,411.27,886
+PROD00290,,Books,218.7,325
+PROD00291,Business-focused leadingedge website,Home,205.99,678
+PROD00292,Persevering web-enabled budgetary management,Apparel,73.84,860
+PROD00293,Customer-focused zero tolerance pricing structure,Home,147.79,137
+PROD00294,,Grocery,325.95,673
+PROD00295,Realigned 6thgeneration middleware,Books,495.16,825
+PROD00296,Customer-focused composite product,Toys,230.73,952
+PROD00297,Decentralized demand-driven hierarchy,Toys,94.0,839
+PROD00298,Diverse upward-trending frame,Toys,180.88,7
+PROD00299,Triple-buffered leadingedge task-force,Toys,424.17,275
+PROD00300,Profit-focused modular superstructure,Electronics,275.35,581
+PROD00301,Cross-platform coherent project,Books,187.45,81
+PROD00302,Multi-lateral full-range challenge,Apparel,366.99,476
+PROD00303,Decentralized dedicated intranet,Home,264.06,483
+PROD00304,Operative zero administration throughput,Books,333.55,648
+PROD00305,Adaptive dynamic workforce,Apparel,291.92,547
+PROD00306,Phased global forecast,Grocery,237.09,587
+PROD00307,Profit-focused composite artificial intelligence,Apparel,213.4,296
+PROD00308,Future-proofed holistic structure,Apparel,349.05,744
+PROD00309,Versatile intangible hierarchy,Toys,133.92,173
+PROD00310,Self-enabling static encryption,Books,329.88,639
+PROD00311,,Electronics,244.96,871
+PROD00312,Progressive intangible toolset,Apparel,129.77,878
+PROD00313,Focused client-driven website,Toys,372.01,756
+PROD00314,Optimized incremental installation,Apparel,226.09,801
+PROD00315,Persevering multi-state utilization,Electronics,245.03,351
+PROD00316,Synergized high-level algorithm,Home,483.84,857
+PROD00317,Organic client-server throughput,Home,496.82,676
+PROD00318,Advanced transitional workforce,Books,320.6,862
+PROD00319,Programmable asymmetric artificial intelligence,Electronics,322.92,53
+PROD00320,Mandatory foreground initiative,Books,202.38,971
+PROD00321,Visionary composite Internet solution,Books,268.6,399
+PROD00322,Centralized hybrid task-force,Electronics,76.85,295
+PROD00323,Automated stable project,Toys,227.17,699
+PROD00324,Distributed object-oriented approach,Apparel,53.2,979
+PROD00325,Self-enabling transitional website,Apparel,307.19,343
+PROD00326,Switchable multi-state frame,Toys,402.15,400
+PROD00327,Operative impactful software,Books,339.27,602
+PROD00328,Total neutral framework,Home,262.38,320
+PROD00329,Up-sized value-added functionalities,Electronics,338.04,421
+PROD00330,Monitored 24/7 focus group,Home,56.43,742
+PROD00331,Progressive reciprocal circuit,Toys,-45.49,672
+PROD00332,Total impactful knowledge user,Electronics,112.33,725
+PROD00333,Stand-alone demand-driven moratorium,Grocery,47.76,672
+PROD00334,Secured zero tolerance process improvement,Home,325.71,917
+PROD00335,Streamlined leadingedge standardization,Books,96.21,958
+PROD00336,Monitored zero tolerance projection,Grocery,229.45,708
+PROD00337,Open-architected zero-defect customer loyalty,Home,386.09,799
+PROD00338,Innovative attitude-oriented alliance,Apparel,389.67,61
+PROD00339,Public-key full-range info-mediaries,Electronics,407.34,503
+PROD00340,Up-sized uniform support,Books,104.33,503
+PROD00341,De-engineered multi-state moratorium,Toys,272.61,658
+PROD00342,Horizontal didactic array,Electronics,223.58,74
+PROD00343,Profound neutral function,Electronics,365.13,918
+PROD00344,Programmable global system engine,Grocery,-48.15,272
+PROD00345,Sharable cohesive adapter,Electronics,168.27,527
+PROD00346,Assimilated needs-based parallelism,Grocery,386.64,864
+PROD00347,Fundamental disintermediate time-frame,Home,407.08,3
+PROD00348,Innovative uniform interface,Electronics,346.18,580
+PROD00349,Profit-focused bifurcated superstructure,Apparel,495.84,410
+PROD00350,Centralized holistic firmware,Apparel,498.52,547
+PROD00351,Self-enabling motivating help-desk,Apparel,173.33,663
+PROD00352,Decentralized actuating system engine,Books,279.47,195
+PROD00353,Streamlined bottom-line knowledge user,Books,198.1,367
+PROD00354,Innovative object-oriented support,Home,443.18,143
+PROD00355,,Home,17.56,500
+PROD00356,Front-line value-added paradigm,Grocery,397.41,546
+PROD00357,Re-contextualized transitional product,Electronics,406.83,37
+PROD00358,Synchronized national policy,Grocery,172.17,121
+PROD00359,Focused grid-enabled framework,Books,328.66,891
+PROD00360,Horizontal static toolset,Electronics,78.73,37
+PROD00361,Universal object-oriented service-desk,Toys,-5.55,46
+PROD00362,Devolved transitional implementation,Apparel,-19.0,840
+PROD00363,Programmable user-facing encryption,Toys,230.81,65
+PROD00364,Customer-focused fresh-thinking model,Toys,57.63,225
+PROD00365,Reduced content-based time-frame,Books,105.31,694
+PROD00366,Multi-lateral logistical attitude,Toys,64.8,140
+PROD00367,Digitized transitional interface,Electronics,482.52,607
+PROD00368,Open-source attitude-oriented array,Grocery,36.29,172
+PROD00369,Centralized interactive capacity,Toys,278.94,41
+PROD00370,Phased didactic knowledge user,Grocery,396.57,796
+PROD00371,Compatible holistic service-desk,Electronics,440.42,183
+PROD00372,Progressive impactful parallelism,Apparel,354.84,426
+PROD00373,Realigned multi-state time-frame,Home,397.16,211
+PROD00374,Object-based empowering paradigm,Home,139.12,960
+PROD00375,Proactive scalable interface,Books,347.38,511
+PROD00376,Organic system-worthy matrix,Apparel,48.57,356
+PROD00377,Upgradable intangible complexity,Toys,281.07,1000
+PROD00378,Digitized motivating capacity,Toys,184.14,519
+PROD00379,Pre-emptive transitional knowledgebase,Apparel,386.31,54
+PROD00380,De-engineered tertiary migration,Grocery,399.32,509
+PROD00381,Progressive bottom-line solution,Books,336.72,372
+PROD00382,Extended logistical leverage,Grocery,220.16,44
+PROD00383,Automated value-added complexity,Home,30.97,804
+PROD00384,,Home,259.88,738
+PROD00385,Robust incremental budgetary management,Books,291.98,693
+PROD00386,Decentralized holistic orchestration,Home,118.88,100
+PROD00387,Implemented 6thgeneration model,Home,209.23,75
+PROD00388,Distributed bottom-line hub,Home,244.78,221
+PROD00389,Integrated holistic framework,Home,230.22,468
+PROD00390,Implemented mobile algorithm,Home,317.85,343
+PROD00391,Digitized client-server toolset,Home,347.64,113
+PROD00392,Reverse-engineered intangible application,Apparel,232.0,225
+PROD00393,Integrated executive data-warehouse,Books,303.8,975
+PROD00394,Enterprise-wide user-facing matrix,Home,89.12,88
+PROD00395,Adaptive bottom-line neural-net,Home,263.28,605
+PROD00396,Monitored asymmetric analyzer,Home,-29.02,253
+PROD00397,Operative mission-critical orchestration,Toys,291.84,968
+PROD00398,Integrated non-volatile knowledge user,Electronics,-1.97,481
+PROD00399,Mandatory zero tolerance implementation,Grocery,254.59,490
+PROD00400,Phased uniform portal,Grocery,349.84,246

@@ -3,3 +3,4 @@ pyyaml
 openai
 python-dotenv
 matplotlib
+databricks-sql-connector
