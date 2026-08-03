@@ -1,8 +1,12 @@
+import os
 from dotenv import load_dotenv
 
-from rag_engine_azure import chunk_reports, embed_chunks, store_in_azure_search, EMBED_DIMENSIONS
+from rag_engine import chunk_reports, embed_chunks, store_in_azure_search, EMBED_DIMENSIONS, DEFAULT_EMBEDDING_PROVIDER
 
 load_dotenv()
+
+provider = os.environ.get("EMBEDDING_PROVIDER", DEFAULT_EMBEDDING_PROVIDER)
+print(f"EMBEDDING_PROVIDER: {provider}")
 
 chunks = chunk_reports()
 print(f"Chunked {len(chunks)} report entries.")

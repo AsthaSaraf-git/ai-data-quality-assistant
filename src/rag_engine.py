@@ -2,7 +2,7 @@ import ast
 import os
 
 import pandas as pd
-from openai import OpenAI
+from openai import OpenAI, AzureOpenAI
 from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient
 from azure.search.documents.indexes import SearchIndexClient
@@ -11,8 +11,14 @@ from azure.search.documents.indexes.models import (
     VectorSearch, HnswAlgorithmConfiguration, VectorSearchProfile,
 )
 
-EMBED_MODEL = "text-embedding-3-small"
-EMBED_DIMENSIONS = 1536  # text-embedding-3-small's fixed output size
+# Model/deployment id used per provider. Both assumed to produce 1536-dim
+# vectors (EMBED_DIMENSIONS below) -- update that if either is repointed at
+# a different base embedding model.
+EMBED_MODEL_OPENAI = "text-embedding-3-small"
+EMBED_DEPLOYMENT_AZURE = "dq-embed-small"  # Azure OpenAI deployment name, not a model id
+EMBED_DIMENSIONS = 1536
+
+DEFAULT_EMBEDDING_PROVIDER = "azure"
 
 # Separate from dq-assistant-index (the day12/day13 README prototype data) so
 # report chunks don't mix with placeholder content in the same index.
@@ -94,13 +100,31 @@ def chunk_reports(reports_folder="reports"):
     return chunks
 
 
+def get_embedding_client():
+    provider = os.environ.get("EMBEDDING_PROVIDER", DEFAULT_EMBEDDING_PROVIDER)
+
+    if provider == "azure":
+        client = AzureOpenAI(
+            azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
+            api_key=os.environ["AZURE_OPENAI_API_KEY"],
+            api_version=os.environ["AZURE_OPENAI_API_VERSION"],
+        )
+        return client, EMBED_DEPLOYMENT_AZURE
+
+    if provider == "openai":
+        client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+        return client, EMBED_MODEL_OPENAI
+
+    raise ValueError(f"Unknown EMBEDDING_PROVIDER {provider!r} (expected 'azure' or 'openai')")
+
+
 def embed_chunks(chunks):
-    openai_client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+    client, model = get_embedding_client()
 
     embedded_chunks = []
     for chunk in chunks:
-        vector = openai_client.embeddings.create(
-            model=EMBED_MODEL, input=chunk["content"]
+        vector = client.embeddings.create(
+            model=model, input=chunk["content"]
         ).data[0].embedding
         embedded_chunks.append({**chunk, "content_vector": vector})
 
