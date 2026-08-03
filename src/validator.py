@@ -1,6 +1,7 @@
 import argparse
 import os
 import pandas as pd
+from dotenv import load_dotenv
 
 from file_loader import load_data, load_rules, get_rule_files, load_table_from_databricks
 from rule_engine import apply_rule
@@ -8,6 +9,8 @@ from report_generator import save_reports
 from ai_assistant import analyze_quality_report, save_ai_analysis
 from history_tracker import append_run_history
 from trend_dashboard import generate_trend_chart
+
+load_dotenv()
 
 DATABRICKS_CATALOG = "dq_assistant"
 DATABRICKS_SCHEMA = "bronze"
